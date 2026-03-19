@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GraduationCap, Award, BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PsychologistIllustration from "@/components/PsychologistIllustration";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -82,9 +83,7 @@ export default function AProposPage() {
               <div className="relative">
                 <div className="aspect-[4/5] bg-gradient-to-br from-lavender-100 via-lavender-50 to-sage-100 rounded-3xl flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-soft-purple to-sage-400 flex items-center justify-center text-5xl font-serif text-white shadow-lg mb-4">
-                      NH
-                    </div>
+                    <PsychologistIllustration className="w-56 h-56 mx-auto mb-4 drop-shadow-lg" />
                     <p className="text-gray-500 text-sm font-medium">Nouhayla Hourrague</p>
                     <p className="text-soft-purple text-xs mt-1">Neuropsychologue</p>
                   </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Brain, Heart, Shield, Star, CheckCircle2, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PsychologistIllustration from "@/components/PsychologistIllustration";
 
 export const metadata: Metadata = {
   title: "Accueil – Neuropsychologue Nouhayla Hourrague",
@@ -108,10 +109,7 @@ export default function HomePage() {
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-sage-100 rounded-full -z-10" />
 
                 <div className="text-center mb-8">
-                  {/* Avatar placeholder */}
-                  <div className="w-28 h-28 mx-auto rounded-full bg-gradient-to-br from-lavender-200 to-sage-200 flex items-center justify-center text-4xl font-serif text-white shadow-md mb-4">
-                    NH
-                  </div>
+                  <PsychologistIllustration className="w-32 h-32 mx-auto mb-4 drop-shadow-md" />
                   <h2 className="font-serif text-xl text-gray-800">Nouhayla Hourrague</h2>
                   <p className="text-soft-purple text-sm font-medium mt-1">Neuropsychologue</p>
                 </div>
