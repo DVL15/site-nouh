@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-gray-700 font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-soft-purple text-white px-7 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:bg-lavender-500 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-soft-purple text-soft-purple px-7 py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:bg-soft-purple hover:text-white hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl text-gray-800 mb-4 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-soft-purple font-medium text-sm uppercase tracking-widest mb-3;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-sm border border-cream-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-soft-purple font-medium text-sm transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-soft-purple after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-cream-300 rounded-xl bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-soft-purple/30 focus:border-soft-purple transition-all duration-200 text-sm;
+  }
+}
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative gradient blobs */
+.blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
